@@ -1,0 +1,138 @@
+/*=============== NavBar ==========================*/
+.NavBarHeader{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: blue;
+    height: 10vh; 
+}
+
+.NavBarWrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0, 1rem;
+}
+
+.NavItem a{
+    color: white;
+    text-decoration: none;
+}
+
+.NavItem ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.NavItem li {
+    padding: 0 0.5rem;
+}
+
+.NavItem a:hover,
+.NavItem a:active{
+    color: #fa923f;
+}
+
+.Spacer{
+    flex: 1;
+}
+
+
+/*=============== MenuBar ==========================*/
+.BackDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.BackDrop.open{
+    opacity: 1;
+}
+
+.SideBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.SideBar.open{
+    transform: translateX(0);
+}
+
+.SideBar ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.SideBar li {
+    margin: 0.5rem 0;
+}
+
+.SideBar a {
+    color: blue;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.SideBar a:hover,
+.SideBar a:active{
+    color: #fa923f;
+}
+
+.MenuBtn{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0);
+    border-width: 0;
+    z-index: 10;
+}
+
+.MenuBtn:hover,
+.MenuBtn:focus{
+    background: rgba(255, 255, 255, 0.4);
+    outline: 0;
+    box-shadow: none!important;
+}
+
+/*============== Responsive Design ============================*/
+@media (max-width: 768px){
+    .NavBarWrapper{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    .MenuBtn{
+        display: none;
+    }
+    .SideBar{
+        display: none;
+    }
+    .BackDrop{
+        display: none;
+    }
+}
