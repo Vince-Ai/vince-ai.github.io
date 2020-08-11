@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import "./NavBar.css"
-import { GlobalContext } from "../GlobalContext"
+import { GlobalContext } from '../GlobalContext';
 import MenuIcon from '@material-ui/icons/Menu';
+import { NavLink } from 'react-router-dom';
 
 function BackDrop(props) {
     let conditionalName= props.isOpen ? "BackDrop open" : "BackDrop"
@@ -10,22 +11,25 @@ function BackDrop(props) {
     );
 }
 
-export function SideBar() {
+export function SideBar(props) {
     const [isOpen, setOpen] = useState(false)
+    const {isEng, setEng} = useContext(GlobalContext);
 
     let conditionalName = isOpen ? "SideBar open" : "SideBar";
 
-    return([
-        <button className="MenuBtn" onClick={()=>setOpen(!isOpen)}><MenuIcon /></button>,
-        <BackDrop isOpen={isOpen}/>,
-        <nav className={conditionalName}>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Research</a></li>
-                <li><a href="/">Projects</a></li>
-                <li><a href="/">Resume</a></li>
-                <li><a href="/">English</a></li>
-            </ul>
-        </nav>
-    ])
+    return(
+        <div>
+            <button className="MenuBtn" onClick={()=>setOpen(!isOpen)}><MenuIcon /></button>
+            <BackDrop isOpen={isOpen}/>
+            <nav className={conditionalName}>
+                <ul>
+                    <li><NavLink exact to="/">{props.Dict[0]}</NavLink></li>
+                    <li><NavLink exact to="/research">{props.Dict[1]}</NavLink></li>
+                    <li><NavLink exact to="/projects">{props.Dict[2]}</NavLink></li>
+                    <li><NavLink exact to="/resume">{props.Dict[3]}</NavLink></li>
+                    <li><div className="SideLangBtn" onClick={() => {setEng(!isEng)}}>{props.Dict[4]}</div></li>
+                </ul>
+            </nav>
+        </div>
+    )
 }
