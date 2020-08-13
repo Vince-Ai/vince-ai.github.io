@@ -1,13 +1,14 @@
 import React, { useState, useContext } from 'react'
-import "./NavBar.css"
+import { NavLink } from 'react-router-dom';
 import { GlobalContext } from '../GlobalContext';
 import MenuIcon from '@material-ui/icons/Menu';
-import { NavLink } from 'react-router-dom';
+import MenuOpenIcon from '@material-ui/icons/MenuOpen';
+import "./NavBar.css"
 
 function BackDrop(props) {
     let conditionalName= props.isOpen ? "BackDrop open" : "BackDrop"
     return (
-        <div className={conditionalName}/>
+        <div className={conditionalName} onClick={()=>props.setOpen(!props.isOpen)}/>
     );
 }
 
@@ -19,8 +20,10 @@ export function SideBar(props) {
 
     return(
         <div>
-            <button className="MenuBtn" onClick={()=>setOpen(!isOpen)}><MenuIcon /></button>
-            <BackDrop isOpen={isOpen}/>
+            <button className="MenuBtn" onClick={()=>setOpen(!isOpen)}>
+                { isOpen ? <MenuOpenIcon /> : <MenuIcon /> }
+            </button>
+            <BackDrop isOpen={isOpen} setOpen={setOpen}/>
             <nav className={conditionalName}>
                 <ul>
                     <li><NavLink exact to="/">{props.Dict[0]}</NavLink></li>
