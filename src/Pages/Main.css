@@ -1,0 +1,14 @@
+h1, h3, h5{
+    width: 100%;
+    text-align: center;
+}
+
+.ProfileWrapper{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
