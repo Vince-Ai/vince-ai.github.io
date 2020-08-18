@@ -118,27 +118,7 @@
     box-shadow: none!important;
 }
 
-/*============== Responsive Design ============================*/
-@media (max-width: 768px){
-    .NavBarWrapper{
-        display: none;
-    }
-}
-
-@media (min-width: 769px){
-    .MenuBtn{
-        display: none;
-    }
-    .SideBar{
-        display: none;
-    }
-    .BackDrop{
-        display: none;
-    }
-}
-
-
-/*============================== Utilities =================================*/
+/*============================== Language =================================*/
 .TopLangBtn {
     background: rgba(0,0,0,0);
     color: white;
@@ -160,4 +140,24 @@
     cursor: pointer;
     outline: 0;
     box-shadow: none!important;
+}
+
+
+/*============== Responsive Design ============================*/
+@media (max-width: 768px){
+    .NavBarWrapper{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    .MenuBtn{
+        display: none;
+    }
+    .SideBar{
+        display: none;
+    }
+    .BackDrop{
+        display: none;
+    }
 }

@@ -6,3 +6,39 @@
     width: 50vw;
     background: red;
 }
+
+.ProjectWrapper{
+    position: absolute;
+    top: 0; left: 0;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background: green;
+}
+
+.ItemWrapper{
+    height: 20vh;
+    width: 20vw;
+    background: yellow;
+}
+
+.ItemWrapper img{
+    height: 10vw;
+    width: 10vw;
+}
+
+.Info{
+    height: 10vh;
+    width: 10vw;
+    background: blue;
+}
+
+.Info strong{
+    height: 10vh;
+    width: 10vw;
+}
+
+.Info p{
+    height: 10vh;
+    width: 60vw;
+}
