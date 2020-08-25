@@ -1,44 +1,36 @@
-.H1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20vh;
-    width: 50vw;
+h1{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: red;
 }
 
 .ProjectWrapper{
     position: absolute;
-    top: 0; left: 0;
+    top: 8vh; left: 0;
     display: grid;
-    width: 100vw;
-    height: 100vh;
     background: green;
 }
 
 .ItemWrapper{
-    height: 20vh;
-    width: 20vw;
     background: yellow;
 }
 
 .ItemWrapper img{
-    height: 10vw;
-    width: 10vw;
+    width: 100%;
 }
 
 .Info{
-    height: 10vh;
-    width: 10vw;
     background: blue;
 }
 
-.Info strong{
-    height: 10vh;
-    width: 10vw;
-}
-
-.Info p{
-    height: 10vh;
-    width: 60vw;
+main{
+    position: relative;
+    left: 5%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-gap: 1rem;
 }

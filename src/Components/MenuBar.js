@@ -28,11 +28,11 @@ export function SideBar(props) {
             <BackDrop isOpen={isOpen} setOpen={setOpen}/>
             <nav className={conditionalName}>
                 <ul>
-                    <li><NavLink exact to="/">{props.Dict[0]}</NavLink></li>
-                    <li><NavLink exact to="/research">{props.Dict[1]}</NavLink></li>
-                    <li><NavLink exact to="/projects">{props.Dict[2]}</NavLink></li>
-                    <li><NavLink exact to="/resume">{props.Dict[3]}</NavLink></li>
-                    <li><div className="SideLangBtn" onClick={() => {setEng(!isEng)}}>{props.Dict[4]}</div></li>
+                    <li><NavLink exact to="/" onClick={() => setOpen(!isOpen)}>{props.Dict[0]}</NavLink></li>
+                    <li><NavLink exact to="/research" onClick={() => setOpen(!isOpen)}>{props.Dict[1]}</NavLink></li>
+                    <li><NavLink exact to="/projects" onClick={() => setOpen(!isOpen)}>{props.Dict[2]}</NavLink></li>
+                    <li><NavLink exact to="/resume" onClick={() => setOpen(!isOpen)}>{props.Dict[3]}</NavLink></li>
+                    <li><div className="SideLangBtn" onClick={() => setEng(!isEng)}>{props.Dict[4]}</div></li>
                 </ul>
             </nav>
         </div>

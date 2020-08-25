@@ -4,37 +4,37 @@ import './Projects.css'
 let ProjectJson = [
     {
         "Name":  "Something2"
-        ,"Img": "imgs/logo_cpp.jpg"
+        ,"Img": "imgs/CatchingFire.jpg"
         ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
         ,"Github": "someurl"
     },
     {
         "Name":  "Something3"
-        ,"Img": "imgs/logo_cpp.jpg"
+        ,"Img": "imgs/CatchingFire.jpg"
         ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
         ,"Github": "someurl"
     },
     {
         "Name":  "Something4"
-        ,"Img": "imgs/logo_cpp.jpg"
+        ,"Img": "imgs/CatchingFire.jpg"
         ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
         ,"Github": "someurl"
     },
     {
         "Name":  "Something5"
-        ,"Img": "imgs/logo_cpp.jpg"
+        ,"Img": "imgs/CatchingFire.jpg"
         ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
         ,"Github": "someurl"
     },
     {
         "Name":  "Something6"
-        ,"Img": "imgs/logo_cpp.jpg"
+        ,"Img": "imgs/CatchingFire.jpg"
         ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
         ,"Github": "someurl"
     },
     {
         "Name":  "Something1"
-        ,"Img": "imgs/logo_cpp.jpg"
+        ,"Img": "imgs/CatchingFire.jpg"
         ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
         ,"Github": "someurl"
     },
@@ -44,7 +44,7 @@ let ProjectJson = [
 export default function Projects (props) {
     return (
         <div className="ProjectWrapper">
-            <div className="H1">Projects</div>
+            <h1>Projects</h1>
             <main>
                 {ProjectJson.map(proj =>
                     <Item props={proj} key={proj.Name}/>
