@@ -22,7 +22,7 @@ export default function NavBar(props) {
                         <li><NavLink exact to="/">{Dict[0]}</NavLink></li>
                         <li><NavLink exact to="/research">{Dict[1]}</NavLink></li>
                         <li><NavLink exact to="/projects">{Dict[2]}</NavLink></li>
-                        <li><NavLink exact to="/resume">{Dict[3]}</NavLink></li>
+                        <li><NavLink exact to="/public/resume.pdf">{Dict[3]}</NavLink></li>
                         <li><div className="TopLangBtn" onClick={()=>{setEng(!isEng)}}>{Dict[4]}</div></li>
                     </ul>
                 </div>

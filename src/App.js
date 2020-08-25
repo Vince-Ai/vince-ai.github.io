@@ -16,7 +16,7 @@ function App() {
           <Route path="/" exact strict component={Main} />
           <Route path="/research" exact strict component={Research} />
           <Route path="/projects" exact strict component={Projects} />
-          <Route path="/resume" exact strict/>
+          <Route path="/public/resume.pdf" exact strict/>
           
         </GlobalContextProvider>
       </div>
