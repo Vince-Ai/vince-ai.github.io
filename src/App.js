@@ -16,7 +16,7 @@ function App() {
           <Route path="/" exact strict component={Main} />
           <Route path={process.env.PUBLIC_URL + '/research'} exact strict component={Research} />
           <Route path={process.env.PUBLIC_URL + '/projects'} exact strict component={Projects} />
-          <Route path={process.env.PUBLIC_URL + '/public/resume.pdf'} exact strict/>
+          <Route path={process.env.PUBLIC_URL + '/resume.pdf'} exact strict/>
           
         </GlobalContextProvider>
       </div>

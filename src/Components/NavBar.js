@@ -22,7 +22,7 @@ export default function NavBar(props) {
                         <li><NavLink exact to="/">{Dict[0]}</NavLink></li>
                         <li><NavLink exact to={process.env.PUBLIC_URL + '/research'}>{Dict[1]}</NavLink></li>
                         <li><NavLink exact to={process.env.PUBLIC_URL + '/projects'}>{Dict[2]}</NavLink></li>
-                        <li><NavLink exact to={process.env.PUBLIC_URL + '/public/resume.pdf'}>{Dict[3]}</NavLink></li>
+                        <li><NavLink exact to={process.env.PUBLIC_URL + '/resume.pdf'}>{Dict[3]}</NavLink></li>
                         <li><div className="TopLangBtn" onClick={()=>{setEng(!isEng)}}>{Dict[4]}</div></li>
                     </ul>
                 </div>

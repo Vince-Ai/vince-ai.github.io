@@ -10,19 +10,20 @@ h1{
 .ProjectWrapper{
     position: absolute;
     top: 8vh; left: 0;
+    width: 100vw;
     display: grid;
     background: green;
 }
 
 .ItemWrapper{
+    width: 100%;
+    display: grid;
     background: yellow;
 }
 
-.ItemWrapper img{
-    width: 100%;
-}
-
 .Info{
+    height: auto;
+    width: auto;
     background: blue;
 }
 
@@ -31,6 +32,63 @@ main{
     left: 5%;
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 2rem;
+}
+
+.Name{
+    position: relative;
+    font-size: calc(12px + 1.5vw);
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Abstract{
+    position: absolute;
+    background: cyan;
+}
+
+.Links{
+    background: purple; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Links a{
+    font-size: 1vw;
+    text-decoration: none;
+    color: black;
+
+}
+.Links a:hover,
+.Links a:hover {
+    color: #fa923f;
+}
+
+/*============== Responsive Design ============================*/
+@media (max-width: 768px){
+    main{
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+    .ItemWrapper{
+        grid-template-rows: 1fr 1fr;
+    }
+    .ItemWrapper img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px){
+    main{
+        grid-auto-rows: 16vw;
+    }
+
+    .ItemWrapper{
+            grid-template-columns: 1fr 4fr;
+        }
+
+    .ItemWrapper img{
+        height: 100%;   
+    }
 }
