@@ -28,3 +28,45 @@ export let edu_zh = [
     },
 ];
 
+export let proj_en = [
+    {
+        "Name":  "Something2"
+        ,"Img": "imgs/CatchingFire.jpg"
+        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
+        ,"Links": [{"[Github]": "someurl"}]
+    },
+    {
+        "Name":  "Something3"
+        ,"Img": "imgs/CatchingFire.jpg"
+        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
+        ,"Links": [{"[Github]": "someurl"}]
+    },
+    {
+        "Name":  "Something4"
+        ,"Img": "imgs/CatchingFire.jpg"
+        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
+        ,"Links": [{"[Github]": "someurl"}]
+    },
+    {
+        "Name":  "Something5"
+        ,"Img": "imgs/CatchingFire.jpg"
+        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
+        ,"Links": [{"[Github]": "someurl"}]
+    },
+    {
+        "Name":  "Something6"
+        ,"Img": "imgs/CatchingFire.jpg"
+        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
+        ,"Links": [{"[Github]": "someurl"}]
+    },
+    {
+        "Name":  "Something1"
+        ,"Img": "imgs/CatchingFire.jpg"
+        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
+        ,"Links": [{"[Github]": "someurl"}]
+    },
+]
+
+export let proj_zh = [
+
+]

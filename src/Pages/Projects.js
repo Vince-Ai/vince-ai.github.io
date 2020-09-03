@@ -1,52 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from "../GlobalContext"
+import {proj_en, proj_zh} from '../Data'
 import './Projects.css'
-
-let ProjectJson = [
-    {
-        "Name":  "Something2"
-        ,"Img": "imgs/CatchingFire.jpg"
-        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
-        ,"Links": [{"[Github]": "someurl"}]
-    },
-    {
-        "Name":  "Something3"
-        ,"Img": "imgs/CatchingFire.jpg"
-        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
-        ,"Links": [{"[Github]": "someurl"}]
-    },
-    {
-        "Name":  "Something4"
-        ,"Img": "imgs/CatchingFire.jpg"
-        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
-        ,"Links": [{"[Github]": "someurl"}]
-    },
-    {
-        "Name":  "Something5"
-        ,"Img": "imgs/CatchingFire.jpg"
-        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
-        ,"Links": [{"[Github]": "someurl"}]
-    },
-    {
-        "Name":  "Something6"
-        ,"Img": "imgs/CatchingFire.jpg"
-        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
-        ,"Links": [{"[Github]": "someurl"}]
-    },
-    {
-        "Name":  "Something1"
-        ,"Img": "imgs/CatchingFire.jpg"
-        ,"Abstract": "Today, I'm going to show you how to use just TWO CSS grid properties to create a fully responsive image gallery"
-        ,"Links": [{"[Github]": "someurl"}]
-    },
-]
 
 
 export default function Projects (props) {
+    const {isEng} = useContext(GlobalContext);
+    let project = isEng ? proj_en : proj_zh;
+
     return (
         <div className="ProjectWrapper">
-            <h1>Projects</h1>
+            <h1>{isEng ? "Projects" : "项目"}</h1>
             <main>
-                {ProjectJson.map(proj =>
+                {project.map(proj =>
                     <Item props={proj} key={proj.Name}/>
                 )}
             </main>
