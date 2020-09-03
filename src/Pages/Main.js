@@ -7,10 +7,11 @@ export default function Main () {
     const {isEng} = useContext(GlobalContext);
 
     return (
-        <div>
-            <Profile isEng={isEng}/>
-            <Education isEng={isEng}/>
-            <Experience isEng={isEng}/>
+        <div className="MainWrapper">
+            <Profile isEng={isEng} />
+            <Introduction isEng={isEng} />
+            <Education isEng={isEng} />
+            <Experience isEng={isEng} />
         </div>
     );
 }
@@ -29,6 +30,18 @@ function Profile (props) {
             </div>
         </div>
     )
+}
+
+function Introduction (props) {
+    let intro = [
+        "I am currently a second year undergraduate student at UCLA majoring in Computer Science and Math. My research interest is in ", 
+        "中文"
+    ];
+    return (
+        <div>
+            {props.isEng ? intro[0] : intro[1]}
+        </div>
+    );
 }
 
 function Education (props) {

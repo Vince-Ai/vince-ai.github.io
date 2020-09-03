@@ -20,10 +20,14 @@ h1{
     display: grid;
     background: yellow;
 }
+.ItemWrapper img{
+    width: 100%;
+}
 
 .Info{
     height: auto;
     width: auto;
+    display: grid;
     background: blue;
 }
 
@@ -37,7 +41,7 @@ main{
 
 .Name{
     position: relative;
-    font-size: calc(12px + 1.5vw);
+    font-size: calc(15px + 0.5rem);
     background: orange;
     display: flex;
     justify-content: center;
@@ -45,20 +49,24 @@ main{
 }
 
 .Abstract{
-    position: absolute;
+    position: relative;
     background: cyan;
+    font-size: 1.25rem;
+    padding: 0 3rem;
 }
 
 .Links{
+    position: relative;
     background: purple; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .Links a{
-    font-size: 1vw;
+    font-size: 1rem;
     text-decoration: none;
     color: black;
+    margin: 0 0.75rem;
 
 }
 .Links a:hover,
@@ -74,9 +82,6 @@ main{
     .ItemWrapper{
         grid-template-rows: 1fr 1fr;
     }
-    .ItemWrapper img{
-        width: 100%;
-    }
 }
 
 @media (min-width: 769px){
@@ -85,10 +90,9 @@ main{
     }
 
     .ItemWrapper{
-            grid-template-columns: 1fr 4fr;
+            grid-template-columns: 1fr 3fr;
         }
-
-    .ItemWrapper img{
-        height: 100%;   
+    .ItemWrapper img {
+        height: 100%;
     }
 }
