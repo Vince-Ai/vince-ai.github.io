@@ -35,7 +35,7 @@ function Profile (props) {
 function Introduction (props) {
     let intro = [
         "I am currently a second year undergraduate student at UCLA majoring in Computer Science and Math. My research interest is in ", 
-        "中文"
+        "我是一名就读于加州大学洛杉矶分校的大二学生，主修计算机与数学双专业"
     ];
     return (
         <div>

@@ -1,6 +1,38 @@
-.ItemWrapper{
-    width: 70%;
-    height: 10vh;
+.ResearchWrapper{
     position: absolute;
-    
+    top: 8vh; left: 0;
+    width: 100vw;
+    display: grid;
+}
+
+.ResMain{
+    position: relative;
+    left: 5%;
+    width: 90%;
+    display: grid;
+    grid-gap: 2rem;
+}
+
+/*============== Responsive Design ============================*/
+@media (max-width: 768px){
+    .ResMain{
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+}
+
+@media (min-width: 769px){
+    .ResMain{
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(13rem, 1fr);
+    }
+
+    .ResMain main{
+        grid-template-columns: 1fr 3fr;
+    }
+    .ResMain p{
+        padding: 0 3rem;
+    }
+    .ResMain img {
+        height: 100%;
+    }
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from "../GlobalContext"
 import {proj_en, proj_zh} from '../Data'
+import Item from '../Components/Item'
 import './Projects.css'
 
 
@@ -11,33 +12,12 @@ export default function Projects (props) {
     return (
         <div className="ProjectWrapper">
             <h1>{isEng ? "Projects" : "项目"}</h1>
-            <main>
+            <div className="ProjMain">
                 {project.map(proj =>
                     <Item props={proj} key={proj.Name}/>
                 )}
-            </main>
-        </div>
-    );
-}
-
-/*
-    Item: A single research item
-    Props: Name, Abstract, Img, 
-           Links: Json [Github, Paper, Poster, Demo]
-*/
-function Item (props) {
-    return(
-        <div className="ItemWrapper">
-            <img src={props.props.Img} alt=""/>
-            <div className="Info">
-                <strong className="Name">{props.props.Name}</strong>
-                <p className="Abstract">{props.props.Abstract}</p>
-                <div className="Links">
-                    {props.props.Links.map(link =>
-                        <a href={Object.values(link)[0]} key={Object.keys(link)[0]}>{Object.keys(link)[0]}</a>
-                    )}
-                </div>
             </div>
         </div>
     );
 }
+
