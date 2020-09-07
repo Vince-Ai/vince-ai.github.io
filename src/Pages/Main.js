@@ -26,7 +26,10 @@ function Profile (props) {
             }</h3>
             <h5>4245359709</h5>
             <div className="contact">
-                
+               <a href="https://github.com/vince-ai"><img src="github.png" alt="" /></a> 
+               <a href="https://linkedin.com/in/vince-ai"><img src="li.png" alt="" /></a>
+               <a href="https://facebook.com/vince.ai.817/"><img src="fb.png" alt="" /></a>
+               <a href="https://instagram.com/vince.ai.817/"><img src="ins.png" alt="" /></a>
             </div>
         </div>
     )
@@ -38,7 +41,7 @@ function Introduction (props) {
         "我是一名就读于加州大学洛杉矶分校的大二学生，主修计算机与数学双专业"
     ];
     return (
-        <div>
+        <div className="MainIntro">
             {props.isEng ? intro[0] : intro[1]}
         </div>
     );
@@ -59,7 +62,7 @@ function Education (props) {
     let cur_edu = props.isEng ? edu_en : edu_zh;
 
     return (
-        <div>
+        <div className="MainEdu">
             <strong>{props.isEng ? "Education" : "学历"}</strong>
             {cur_edu.map(edu => <Field key={edu.Name} data={edu}/>)}
         </div>
@@ -69,8 +72,8 @@ function Education (props) {
 
 function Experience () {
     return (
-        <div>
-
+        <div className="MainFooter">
+            Experience
         </div>
     );
 }

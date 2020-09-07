@@ -9,6 +9,59 @@ h1, h3, h5{
     position: absolute;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contact {
+    position: relative;
+    right: 20%;
+    top: 10%;
+    width: 20vw;
+    height: 2vw;
+    display: grid;
+    grid-auto-flow: column;
+    gap: calc(10px + 1vw);
+}
+
+.contact a{
+    width: calc(15px + 1vw);
+    height: calc(15px + 1vw);
+}
+
+.contact img{
     width: 100%;
     height: 100%;
+}
+
+
+/*===============================================================================*/
+.MainIntro{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+/*=======================================================================*/
+.MainEdu{
+    position: absolute;
+    top: 200vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+/*========================================================================*/
+.MainFooter{
+    position: absolute;
+    top: 300vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
