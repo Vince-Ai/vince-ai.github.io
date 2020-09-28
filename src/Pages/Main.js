@@ -26,10 +26,10 @@ function Profile (props) {
             }</h3>
             <h5>4245359709</h5>
             <div className="contact">
-               <a href="https://github.com/vince-ai"><img src="github.png" alt="" /></a> 
-               <a href="https://linkedin.com/in/vince-ai"><img src="li.png" alt="" /></a>
-               <a href="https://facebook.com/vince.ai.817/"><img src="fb.png" alt="" /></a>
-               <a href="https://instagram.com/vince.ai.817/"><img src="ins.png" alt="" /></a>
+               <a href="https://github.com/vince-ai" target="_blank" rel="noopener noreferrer"><img src="imgs/github.png" alt="" /></a> 
+               <a href="https://linkedin.com/in/vince-ai" target="_blank" rel="noopener noreferrer"><img src="imgs/li.png" alt="" /></a>
+               <a href="https://facebook.com/vince.ai.817/" target="_blank" rel="noopener noreferrer"><img src="imgs/fb.png" alt="" /></a>
+               <a href="https://instagram.com/vince.ai.817/" target="_blank" rel="noopener noreferrer"><img src="imgs/ins.png" alt="" /></a>
             </div>
         </div>
     )
@@ -42,7 +42,8 @@ function Introduction (props) {
     ];
     return (
         <div className="MainIntro">
-            {props.isEng ? intro[0] : intro[1]}
+            <strong>Introduction</strong>
+            <p>{props.isEng ? intro[0] : intro[1]}</p>
         </div>
     );
 }
